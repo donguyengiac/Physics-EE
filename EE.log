@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.5)  8 MAR 2023 21:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.5)  9 MAR 2023 00:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -240,26 +240,36 @@ Package pdftex.def Info: fig3.png  used on input line 56.
 <fig4.png, id=46, 943.1235pt x 422.7795pt>
 File: fig4.png Graphic file (type png)
 <use fig4.png>
-Package pdftex.def Info: fig4.png  used on input line 166.
+Package pdftex.def Info: fig4.png  used on input line 173.
 (pdftex.def)             Requested size: 360.0pt x 161.38039pt.
- [8 <./fig4.png>] [9] (./EE.aux)
+ [8] [9 <./fig4.png>]
+
+LaTeX Warning: Reference `enum4' on page 10 undefined on input line 214.
+
+
+LaTeX Warning: Reference `enum5' on page 10 undefined on input line 215.
+
+[10] (./EE.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 6467 strings out of 478268
- 153342 string characters out of 5846348
- 431746 words of memory out of 5000000
- 24620 multiletter control sequences out of 15000+600000
+ 6469 strings out of 478268
+ 153356 string characters out of 5846348
+ 431748 words of memory out of 5000000
+ 24622 multiletter control sequences out of 15000+600000
  475669 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,12n,79p,1988b,760s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on EE.pdf (9 pages, 365995 bytes).
+Output written on EE.pdf (10 pages, 369725 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 117 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
