@@ -153,14 +153,21 @@
             From the equation (\ref{eqn31}), the constants I need to determine are $f_0$, $\mu$, $A$, $Y$, $a$, $b$ and $l$. 
             \begin{itemize}
                 \item $l$ is the scale length of the guitar. For a Fender Stratocaster, it is 25.5 inches (64.77cm). I round this up to 64.8cm (3s.f). From this information, I can adjust the bridge saddle position so that the scale length matches 64.8cm (0.648 m)
-                \item Initial frequency $f_0$ can be measured directly in the experiment.
+                \item Initial frequency $f_0$ can be measured directly in the experiment. Frequency we aim for is the frequency of G string on the guitar, $G_3$ at 196 Hz
                 \item Young's modulus $Y$ is dependent on the specifications of the string material. The string I use follows the ATSM-A228 standard, and the accepted literature value of $Y$ is \SI{210}{\giga\pascal} (\SI{2.10e11}{\pascal})
                 \item $A$ - the cross-sectional area of the string. This can be calculated based on the diameter of the string. For this string set, the G string gauge is 17-gauge, which is equivalent to a diameter of 0.017 inches (0.4318 mm). Using the formula for area of a circle from diameter:
                 \begin{align*}
                     A &= \frac{\pi d^2}{4} \\
                     &= \SI{1.464e-7}{\meter}
                 \end{align*}
-                \item $\mu$, the linear density of the string, is determined from the equation
+                \item $\mu$, the linear density of the string, is determined as \\
+                \begin{equation*}
+                    \mu = \frac{m}{l} = \frac{\rho V}{l} = \frac{\rho l A}{l} = \rho A
+                \end{equation*}
+                where $m$ is the mass of the vibrating string section, $V$ is its volume, and $\rho$ is the volumetric density of the material. According to ATSM-A228 standards, $\rho = \SI{7.80e3}{\kg.m^{-3}}$.
+                \begin{equation*}
+                    \mu = \num{7.80e3} \cdot \num{1.46e-7} = \SI{1.14e-3}{kg.m^{-1}}
+                \end{equation*}
                 \item $a$ and $b$: it is very hard to measure these directly, as they are distance from the nut and saddle to the top of the fret, not the height itself. Therefore I can only set up the guitar indirectly according to recommended values and calculate them afterwards. I follow the instructions by Stewmac, and take the average value of the action (distance between string and top of fret) for the \nth{1} fret to be 0.016" (0.406mm) and \nth{12} fret to be 0.070" (1.78mm). I change the adjustable saddle height and file down/shim up the nut height to match these values. From there I can calculate the values of $a$ and $b$: \\
                 \begin{figure}[ht]
                     \includegraphics[width = \textwidth]{fig4.png}
@@ -189,12 +196,24 @@
                 \begin{align*}
                     a &= 1.78 + 1.55 = \SI{3.33e-3}{\meter} \\
                     b &= 1.78 - 1.55 = \SI{1.30e-4}{\meter}
-                \end{align*}
-                \item 
-
-                
+                \end{align*}    
             \end{itemize}
-            
+        \subsection{Apparatus}
+            \begin{itemize}
+                \item 1 Fender Stratocaster style guitar
+                \item 1 17-gauge plain unwound steel G string
+                \item 1 guitar capo 
+                \item 1 guitar pick
+            \end{itemize}
+        \subsection{Process}
+            \begin{enumerate}
+                \item Setting up the guitar. I used the instructions by Stewmac %cite
+                \item Connect the guitar to frequency measuring software. I used my audio interface to connect the guitar to my laptop, and the software I used is Visual Analyzer 2020. I chose this because it supports FFT (Fast Fourier Transform) in real-time and can be configured to provide results with high accuracy. 
+                \item Measure $f_0$ by plucking the string with no capo on.
+                \item Pluck it 5 times with the pick, changing the plucking position each time, from above the neck pickup, to between neck and middle pickups, above middle, between middle and bridge, and above bridge pickup. Record the peak frequency (highest dB) for each pick. \label{enum4}
+                \item Put capo on \nth{7} fret and repeat step \ref{enum4}. \label{enum5}
+                \item Repeat step \ref{enum5} from fret 7 up to fret 17
+            \end{enumerate}
         
         
     \end{flushleft}
