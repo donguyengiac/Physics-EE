@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.5)  9 MAR 2023 00:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.5)  9 MAR 2023 00:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -156,7 +156,8 @@ Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 Package: nth 2002/02/27
 )
 Package translations Info: No language package found. I am going to use `english' as default language. on input line 10.
- (./EE.aux)
+
+No file EE.aux.
 \openout1 = `EE.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -173,7 +174,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
- (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count282
 \scratchdimen=\dimen157
@@ -213,41 +214,125 @@ Package color Info: Driver file: pdftex.def on input line 149.
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 10.
- (./EE.toc)
+
+No file EE.toc.
 \tf@toc=\write3
 \openout3 = `EE.toc'.
 
- [1
+[1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<fig1.png, id=11, 1019.007pt x 181.8795pt>
+<fig1.png, id=10, 1019.007pt x 181.8795pt>
 File: fig1.png Graphic file (type png)
 <use fig1.png>
 Package pdftex.def Info: fig1.png  used on input line 22.
 (pdftex.def)             Requested size: 360.0pt x 64.25545pt.
-<fig2.png, id=13, 1049.1195pt x 130.68825pt>
+<fig2.png, id=12, 1049.1195pt x 130.68825pt>
 File: fig2.png Graphic file (type png)
 <use fig2.png>
 Package pdftex.def Info: fig2.png  used on input line 28.
 (pdftex.def)             Requested size: 360.0pt x 44.8442pt.
- [2 <./fig1.png>]
-<fig3.png, id=18, 1009.97325pt x 185.493pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2 <./fig1.png>]
+
+LaTeX Warning: Reference `fig2' on page 3 undefined on input line 38.
+
+
+LaTeX Warning: Reference `eqn2' on page 3 undefined on input line 46.
+
+
+LaTeX Warning: Reference `eqn3' on page 3 undefined on input line 46.
+
+
+LaTeX Warning: Reference `eqn1' on page 3 undefined on input line 46.
+
+<fig3.png, id=20, 1009.97325pt x 185.493pt>
 File: fig3.png Graphic file (type png)
 <use fig3.png>
 Package pdftex.def Info: fig3.png  used on input line 56.
 (pdftex.def)             Requested size: 360.0pt x 66.11794pt.
- [3 <./fig2.png>] [4 <./fig3.png>] [5] [6] [7]
+[3 <./fig2.png> <./fig3.png>]
+
+LaTeX Warning: Reference `fig3' on page 4 undefined on input line 72.
+
+
+LaTeX Warning: Reference `fig3' on page 4 undefined on input line 84.
+
+
+LaTeX Warning: Reference `eqn9' on page 4 undefined on input line 91.
+
+[4]
+
+LaTeX Warning: Reference `fig3' on page 5 undefined on input line 112.
+
+[5]
+
+LaTeX Warning: Reference `eqn21' on page 6 undefined on input line 125.
+
+
+LaTeX Warning: Reference `eqn29' on page 6 undefined on input line 130.
+
+
+LaTeX Warning: Reference `eqn20' on page 6 undefined on input line 130.
+
+
+LaTeX Warning: Reference `eqn4' on page 6 undefined on input line 134.
+
+
+LaTeX Warning: Reference `eqn30' on page 6 undefined on input line 142.
+
+[6]
+
+LaTeX Warning: Reference `eqn31' on page 7 undefined on input line 153.
+
+[7]
 <fig4.png, id=46, 943.1235pt x 422.7795pt>
 File: fig4.png Graphic file (type png)
 <use fig4.png>
 Package pdftex.def Info: fig4.png  used on input line 173.
 (pdftex.def)             Requested size: 360.0pt x 161.38039pt.
- [8] [9 <./fig4.png>]
+
+
+LaTeX Warning: Reference `eqn6' on page 8 undefined on input line 181.
+
+
+LaTeX Warning: Reference `fig4' on page 8 undefined on input line 187.
+
+[8] [9 <./fig4.png>]
 
 LaTeX Warning: Reference `enum4' on page 10 undefined on input line 214.
 
 
 LaTeX Warning: Reference `enum5' on page 10 undefined on input line 215.
+
+
+/Users/donguyengiac/Documents/Physics-EE/EE.tex:218: Package keyval Error: w undefined.
+
+See the keyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.218 ...    \includegraphics[w = textwidth]{name}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+/Users/donguyengiac/Documents/Physics-EE/EE.tex:218: LaTeX Error: File `name' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.218 ...    \includegraphics[w = textwidth]{name}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 [10] (./EE.aux)
 
@@ -258,15 +343,15 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 6469 strings out of 478268
- 153356 string characters out of 5846348
- 431748 words of memory out of 5000000
- 24622 multiletter control sequences out of 15000+600000
+ 6508 strings out of 478268
+ 153814 string characters out of 5846348
+ 431614 words of memory out of 5000000
+ 24653 multiletter control sequences out of 15000+600000
  475669 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,12n,79p,1988b,760s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 71i,12n,79p,1988b,774s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on EE.pdf (10 pages, 369725 bytes).
+Output written on EE.pdf (10 pages, 369153 bytes).
 PDF statistics:
  117 PDF objects out of 1000 (max. 8388607)
  68 compressed objects within 1 object stream
