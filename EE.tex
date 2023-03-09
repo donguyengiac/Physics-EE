@@ -3,6 +3,7 @@
 \usepackage{amsmath}
 \usepackage{siunitx}
 \usepackage[super]{nth}
+\usepackage{caption}
 %\usepackage{hyperref}
 
 \title{Investigation on Relationship Between Location of Fretted Note on Guitar Neck and Note Intonation.}
@@ -214,24 +215,44 @@
                 \item Put capo on \nth{7} fret and repeat step \ref{enum4}. Note that the edge of the capo must be right on top of the fret (Figure \ref{fig5})\label{enum5}
                 \item Repeat step \ref{enum5} from fret 8 up to fret 16. I cannot go higher than this because this is where the neck meets the body, it is impossible to put the capo.
             \end{enumerate}
-            \begin{figure}[!h]
+            \begin{figure}
                 \includegraphics[width = \textwidth]{ee/experiment_setup.jpg}
                 \caption{My experimental setup. I position the guitar neck outside the table for ease of access to the capo} \label{fig5}
-            \end{figure}
-            \begin{figure}[!h]
                 \includegraphics[angle=270, width = \textwidth]{ee/capo_on_fret.jpg}
                 \caption{Close up of capo placement. This ensures consistent pressure and contact with the string and fret} \label{fig6}
-            \end{figure}
-            \begin{figure}[!h]
-                \includegraphics[width = \textwidth]{wave&freq.png}
-                \caption{Screenshot of Visual Analyzer software. On top is the live waveform, and on the bottom is the frequency spectrum} \label{fig7}
-            \end{figure}
-            \begin{figure}[!h]
                 \includegraphics[width = \textwidth]{freq.png}
-                \caption{Frequency spectrum of a note. This can be zommed in further to accurately read peak frequency value.} \label{fig8}
+                \caption{Frequency spectrum of a note in Visual Analyzer. This can be zommed in further to accurately read peak frequency value.} \label{fig7}
             \end{figure}
-
-        
+        \newpage
+        \subsection{Tables of results}
+            \subsubsection*{Table of raw data}
+                \begin{figure}[!h]
+                    \includegraphics[width = \textwidth]{raw_table.png}
+                    \captionof{table}{Raw collected data}
+                \end{figure}
+            The frequencies are taken up to 2d.p because this is the smallest the software can measure.
+            \subsubsection*{Table of processed data}
+                \begin{figure}[!h]
+                    \includegraphics[width = \textwidth]{processed_table.png}
+                    \captionof{table}{Table of processed data}
+                \end{figure}
+            \subsubsection*{Sample calculations}
+            All example calculations are taken from values for fret 7.
+            \begin{itemize}
+                \item Fret distance is $l_n$, calculated from the luthier equation (\ref{eqn6}) \\
+                $l_n = \frac{.648}{\sqrt[12]{2^7}} = \SI{.432}{m}$
+                \item Average frequency is simply average value of the 5 trials. \\
+                avg.$f = \frac{294.98 + 294.98 + 294.99 + 294.98 + 294.99 }{5} = \SI{294.98}{Hz}$
+                \item Note names correspond to standard note positions on G string on a standard guitar
+                \item Standard frequency corresponds to notes, as taken from this source []
+                \item Uncalibrated $\Delta f$ is the difference between the average and the standard frequency. \\
+                Uncalibrated $\Delta f = 294.98 - 293.66 = \SI{1.32}{Hz}$
+                \item $\Delta f$ is the intonation deviation at each fret, after taking into account the intonation difference at $f_0$.\\
+                $\Delta f = 1.32 - .22 = \SI{1.10}{Hz}$
+                \item Absolute uncertainty of $\Delta f$ is half the range of trial values, taken to 1 s.f\\
+                Abs. unc. of $\Delta f = (294.99-294.98)/2 = 0.005$
+            \end{itemize}
+            
     \end{flushleft}
 
 \end{document}
