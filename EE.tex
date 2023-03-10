@@ -147,7 +147,7 @@
                 
 
     \section{Experiment}
-        From the final expression relating $\Delta f$ and $l_n$, knowing all other constants I can plot the graph for this. $\Delta f$ is the dependent variable, and $l_n$ is the independent variable. It is impossible to linearize the equation, therefore I will have to resort to collecting the data, plotting the graph, then confirming the relationship using a regression method to see how well the data fits the model. 
+        From the final expression relating $\Delta f$ and $l_n$, knowing all other constants I can plot the graph for this. $\Delta f$ is the dependent variable, and $l_n$ is the independent variable. I expect the intonation difference $\Delta f$ to be higher when the fretting distance is closer to the bridge ($l_n$ closer to 0), and lower closer to the nut, in the first few frets (larger values of $l_n$). The general shape of the graph can be compared with my expectation as a sanity check. It is impossible to linearize the equation, therefore I will have to resort to collecting the data, plotting the graph, then confirming the relationship using a regression method to see how well the data fits the model. 
         The choice of guitar I will use for this experiment is a Fender Stratocaster. This is arguably the most iconic and popular guitar in history, known for its versatility and playability. Therefore I pick this guitar because there is a wealth of information available on it, to make it easier to find data to support my research or to compare my results to other studies. Also due to its popularity, the Stratocaster is a well-known and well-understood instrument. This can make it easier to control variables in my experiment and ensure consistent results.
         The choice of string I will use is a G string from D'Addario's set of Nickel Wound Regular Light Gauge - EXL110-10P that I have at home. I choose the G string because it is the thickest string in the set that is a plain unwound string. This is because the thicker string will make the effects of the intonation shift more noticeable. %cite this
         \subsection{Determining the constants}
@@ -172,7 +172,7 @@
                 \item $a$ and $b$: it is very hard to measure these directly, as they are distance from the nut and saddle to the top of the fret, not the height itself. Therefore I can only set up the guitar indirectly according to recommended values and calculate them afterwards. I follow the instructions by Stewmac, and take the average value of the action (distance between string and top of fret) for the \nth{1} fret to be 0.016" (0.406mm) and \nth{12} fret to be 0.070" (1.78mm). I change the adjustable saddle height and file down/shim up the nut height to match these values. From there I can calculate the values of $a$ and $b$: \\
                 \begin{figure}[ht]
                     \includegraphics[width = \textwidth]{fig4.png}
-                    \caption{Diagram to calculate values of $a$ and $b$} \label{fig4}
+                    \caption{Diagram to calculate values of $a$ and $b$ (Exaggerated)} \label{fig4}
                 \end{figure}
                 Since fret \nth{12} is exactly in the middle of l ($l_{12} = \frac{l}{2} = \frac{.648}{2} = .324$ m) we get a pair of congruent triangles as highlighted. Therefore:
                 \begin{align*}
@@ -240,18 +240,30 @@
             All example calculations are taken from values for fret 7.
             \begin{itemize}
                 \item Fret distance is $l_n$, calculated from the luthier equation (\ref{eqn6}) \\
-                $l_n = \frac{.648}{\sqrt[12]{2^7}} = \SI{.432}{m}$
+                $l_7 = \frac{.648}{\sqrt[12]{2^7}} = \SI{.432}{m}$
                 \item Average frequency is simply average value of the 5 trials. \\
-                avg.$f = \frac{294.98 + 294.98 + 294.99 + 294.98 + 294.99 }{5} = \SI{294.98}{Hz}$
+                avg.$f = \frac{294.76 + 294.76 + 294.77 + 294.76 + 294.77 }{5} = \SI{294.76}{Hz}$
                 \item Note names correspond to standard note positions on G string on a standard guitar
                 \item Standard frequency corresponds to notes, as taken from this source []
-                \item Uncalibrated $\Delta f$ is the difference between the average and the standard frequency. \\
-                Uncalibrated $\Delta f = 294.98 - 293.66 = \SI{1.32}{Hz}$
-                \item $\Delta f$ is the intonation deviation at each fret, after taking into account the intonation difference at $f_0$.\\
-                $\Delta f = 1.32 - .22 = \SI{1.10}{Hz}$
-                \item Absolute uncertainty of $\Delta f$ is half the range of trial values, taken to 1 s.f\\
-                Abs. unc. of $\Delta f = (294.99-294.98)/2 = 0.005$
+                \item $\Delta f$ is the intonation deviation at each fret, calculated as the difference between the average frequency and the standard frequency.\\
+                $\Delta f = 294.76 - 293.66 = \SI{1.10}{Hz}$
+                \item Absolute uncertainty of $\Delta f$ is half the range of trial values up to 1 s.f\\
+                Abs. unc. of $\Delta f = (294.77-294.76)/2 = \SI{0.005}{Hz}$
             \end{itemize}
+        \subsection{Analysis of results}
+            \subsubsection*{Graphs}    
+                After collecting the data, I can take the average value of $f_0 = \SI{196.22}{Hz}$ as the constant value of $f_0$ for Equation (\ref{eqn31}). Now I can plot the graph relating $\Delta f$ and $l_n$. The range of the graph is $\{0 \le x \le 0.648 \}$, because this is the scale length of the guitar. Below is the general form of the graph with the constants. \\
+                \begin{figure}[h!]
+                    \includegraphics[width = \textwidth]{no_data_graph.png}
+                    \caption{General form of the graph without data points} \label{fig8}
+                \end{figure}
+                From the graph, we can see it matches with my expectation. Overall $\Delta f$ is lower for larger $l_n$ (further from the bridge, lower frets), and increases when $l_n$ is smaller (higher frets, closer to the brdge). There are 2 asymptotes, one at 0, one slightly larger than 0, and one at $l_n = l$. Mathematically the vertical asymptotes at 0 and at $l$ come from Equation ($\ref{eqn31}$) when the denominator of the terms inside brackets is equal to 0 ($l_n = 0$ \& $l-l_n = 0$). 
+                I can take the first derivative of this with respect to $l_n$ to analyze further. The graph of the first derivative has a zero at approx. 0.0048, indicating there is an extremum of the initial function at this point that is not shown on the graph. Plugging $l_n = 0.0048$ into the initial function, it returns a value of approx. \SI{3193}{Hz}, so this is a very large maximum. This 
+                My physical interpretation of this value is this is the breaking point of the string. Notice how the value of $l_n = 0.0048$ is very small, this is very close to the bridge, just \SI{4.3}{mm} away. If you try to fret very close to the nut or the bridge, the "breaking angle" $\theta$ of the string in Figure \ref{fig9} gets very large, therefore the amount of force needed to counteract the tension to depress the string to touch the fret increases dramatically, which also increases the tension of the string accordingly, which increases the frequency. This explains the steep increase in $\Delta f$ at $l_n = l$ (tending to $+\infty$ as a vertical asymptote) and the maxima. At the maxima, the tension in the string gets too large and the string break, explaining the abnormal peak. 
+                \begin{figure}
+                    \includegraphics[width=\textwidth]{breaking_angles.png}
+                    \caption{Breaking angle $\theta$ of string when fretting near bridge and nut} \label{fig9}
+                \end{figure}
             
     \end{flushleft}
 
