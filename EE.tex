@@ -11,8 +11,10 @@
 
 %\usepackage{hyperref}
 
-\title{Investigation on Relationship Between Location of Fretted Note on Guitar Neck and Note Intonation.}
+\title{Investigation on Relationship Between Location of Fretted Note on Guitar Neck and Note Intonation Error.}
 \author{IB Physics Extended Essay}
+\date{March 12, 2023 \\~\\\tiny Word Count: 3997}
+
 \begin{document}
     \maketitle
     \newpage
@@ -29,7 +31,6 @@
                     \includegraphics[width=\textwidth]{fig1.png}
                     \caption{A simplified model of the electric guitar I will use. The pickup has been removed.}\label{fig1}
                 \end{figure} 
-                
                 \FloatBarrier
             \subsubsection*{How the guitar string produces sound}
                 When the string is plucked, it will create travelling waves on the string that reflect at both ends, creating standing waves. The frequency of the standing waves with the longest wavelength is the fundamental frequency, also called the first harmonic. This is the lowest frequency, and there will usually be other higher harmonics that when combined together create the characteristic timbre of the electric guitar. 
@@ -215,7 +216,7 @@
         \subsection{Process}
             \begin{enumerate}
                 \item Setting up the guitar. I used the instructions by Stewmac \cite{stewmac}
-                \item Connect the guitar to frequency measuring software. I used my audio interface to connect the guitar to my laptop, and the software I used is Visual Analyzer 2020 \cite{va20}. I chose this because it supports Fast Fourier Transform in real-time to convert guitar signals into frequency spectrum, and can be configured to provide results with high accuracy. 
+                \item Connect the guitar to frequency measuring software. I used my audio interface to connect the guitar to my laptop, and the software I used is Visual Analyzer 2020 \cite{va20}. I choose this because it supports Fast Fourier Transform in real-time to convert guitar signals into frequency spectrum, and can be configured to provide results with high accuracy. 
                 \item Measure $f_0$ by plucking the string with no capo on.
                 \item Pluck it 5 times with the pick, changing the plucking position each time (above the neck pickup, between neck and middle, above middle, between middle and bridge, and above bridge pickup). Record the peak frequency (highest dB) for each pick. \label{enum4}
                 \item Put capo on \nth{7} fret and repeat step \ref{enum4}. Ensure that the edge of the capo must be right on top of the fret and the capo is pushing the string straight downwards, not sideways. (Figure \ref{fig6})\label{enum5}
@@ -329,9 +330,9 @@
         So a lower string action would be better for intonation. Guitar manufacturers as well as guitarists can take this into account when setting up their guitars to reduce the intonation error. However, reducing the saddle height too much will cause buzzing of the string, where the string hit against other frets when it is plucked and vibrating. This will reduce the quality of the tone and might even lead to more intonation error. Therefore a careful trial and error approach is needed when adjusting for a good intonation. \par
         
         Overall from the investigation we see that the intonation of a guitar string is a complicated variable and is affected by a lot of different factors. We cannot eliminate it completely, but there are some things we can do to control it to try and minimize the intonation shifts, such as using low gauge strings and having a low action. However I believe guitar players shouldn't worry too much about it, as I think intonation errors generally exhibit "self-correcting" behavior. This is because when a player can hear slight deviations in pitch, their fretting fingers will make micro-movements to try to compensate for this.
-    
+        \newpage
         \begin{thebibliography}{15}
-
+            \scriptsize
             \bibitem[Britannica, 2023]{eqn1} Britannica, T. Editors of Encyclopaedia (2023, January 10). "wavelength. Encyclopedia Britannica". \url{https://www.britannica.com/science/wavelength}.
             
             \bibitem[OpenStax, 2016]{eqn3} OpenStax. “16.3 Wave Speed On a Stretched String.” Pressbooks, 3 Aug. 2016, \url{https://pressbooks.online.ucf.edu/osuniversityphysics/chapter/16-3-wave-speed-on-a-stretched-string}.
