@@ -1,0 +1,22 @@
+A stretched guitar string is under tension $T$. When we press down on it, the whole string stretches accordingly by a small amount $\Delta l$. Assuming there is no friction on the point of contact, the tension in the whole string increases by an amount $\Delta T$, determined by:
+\begin{equation}
+    \Delta T = \frac{AY\Delta l}{l}\label{eqn21}
+\end{equation} 
+Where $A$ is the cross-sectional area of the string, and $Y$ is the Young's modulus of the material. \cite{polak} \par
+The total amount of stretch of the string $\Delta l$ can be calculated from Figure \ref{fig3}. 
+\begin{align}
+    \Delta l &= (l_b + l_n') - l \\
+    &= \sqrt{(l-l_n)^2+b^2} + \sqrt{l_n^2+a^2} - l \\
+    &= (l-l_n)\sqrt{1+\left(\frac{b}{l-l_n}\right)^2} + l_n\sqrt{1+\left(\frac{a}{l_n}\right)^2} - l\\
+    &= (l-l_n)\left(1+\left(\frac{b}{l-l_n}\right)^2\right)^{\frac{1}{2}} + l_n\left(1+\left(\frac{a}{l_n}\right)^2\right)^{\frac{1}{2}} - l
+\end{align}
+Once again, we can approximate this to the first order since both $a$ and $b$ are much smaller than $l_n$ and $l-l_n$. Therefore,
+\begin{align}
+    \Delta l &\approx (l-l_n)\left(1+\frac{b^2}{2(l-l_n)^2}\right)+ l_n\left(1+\frac{a^2}{2l_n^2}\right) - l \label{eqn26} \\
+    &= (l - l_n) + \frac{b^2}{2(l-l_n)} + l_n + \frac{a^2}{2l_n} - l \\
+    &= \frac{b^2}{2(l-l_n)} + \frac{a^2}{2l_n}
+\end{align}
+Substituting this into (\ref{eqn21}) we get
+\begin{equation}
+    \Delta T = \frac{AY}{2l} \left( \frac{b^2}{l-l_n} + \frac{a^2}{l_n} \right) \label{eqn29}
+\end{equation}
