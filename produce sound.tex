@@ -1,24 +1,40 @@
+When the string is plucked, it will create travelling waves on the string that reflect at both ends, creating standing waves. The frequency of the standing waves with the longest wavelength is the fundamental frequency, also called the first harmonic. This is the lowest frequency, and there will usually be other higher harmonics that when combined create the characteristic timbre of the electric guitar. \par
+%\begin{figure}[h]
+%    \includegraphics[width=\textwidth]{./ee/fig2.png}
+%    \caption{The “open” string (not fretted) is plucked and vibrating at its fundamental frequency.}\label{fig2}
+%\end{figure} 
+The fundamental frequency $f_0$ of a string can be determined by Mersenne's law:
+\begin{equation}\label{eqn1}
+    f_0 = \frac{1}{2l}\sqrt{\frac{T}{\mu}}
+\end{equation}
+where $l$ is the length of the string - the “scale length”, $T$ is the tension on the string, and $\mu$ is the linear density of the string (mass of string per unit length). \cite{mersenne} \par
+%From Figure \ref{fig2} we see the wavelength is double the length of the guitar - the “scale length” $l$ . Therefore \begin{equation}\label{eqn2}
+%    \lambda = 2l
+%\end{equation}
+%The speed of the wave $v$ on a stretched string with tension $T$ can be determined by the equation:
+%\begin{equation}\label{eqn3}
+%    v = \sqrt{\frac{T}{\mu}} 
+%\end{equation}
+%Where $\mu$ is the linear density of the string (mass of string per unit length) \cite{eqn3}\par
+%Substitute (\ref{eqn2}) and (\ref{eqn3}) into (\ref{eqn1}) we get the expression for the frequency of an open string
+%\begin{equation}\label{eqn4}
+%    f_0 = \frac{1}{2l}\sqrt{\frac{T}{\mu}}
+%\end{equation}
+When the string is pressed down on a fret and plucked, its vibrating length changes, changing the frequency.\par
+Figure \ref{fig3} shows a model of the string pressed down on fret $n$. The distance from the bridge to the fret then is $l_n$
 
-When the string is plucked, it will create travelling waves on the string that reflect at both ends, creating standing waves. The frequency of the standing waves with the longest wavelength is the fundamental frequency, also called the first harmonic. This is the lowest frequency, and there will usually be other higher harmonics that when combined create the characteristic timbre of the electric guitar. 
-\begin{figure}[h]
-    \includegraphics[width=\textwidth]{./ee/fig2.png}
-    \caption{The “open” string (not fretted) is plucked and vibrating at its fundamental frequency.}\label{fig2}
+\begin{figure}[!ht]
+    \includegraphics[width=\textwidth]{./ee/fig3.png}
+    \caption{A simplified model of the fretted string}\label{fig3}
 \end{figure} 
 
-The fundamental frequency $f_0$ of a string is determined by this formula
-\begin{equation}\label{eqn1}
-    f_0 = \frac{v}{\lambda}
+Theoretically, the frequency of this note is 
+\begin{equation}\label{eqn5}
+    f_n = \frac{1}{2l_n}\sqrt{\frac{T}{\mu}}
 \end{equation}
-where $v$ is the speed of the wave on the string and $\lambda$ is the wavelength. \cite{eqn1} \par 
-From Figure \ref{fig2} we see the wavelength is double the length of the guitar - the “scale length” $l$ . Therefore \begin{equation}\label{eqn2}
-    \lambda = 2l
-\end{equation}
-The speed of the wave $v$ on a stretched string with tension $T$ can be determined by the equation:
-\begin{equation}\label{eqn3}
-    v = \sqrt{\frac{T}{\mu}} 
-\end{equation}
-Where $\mu$ is the linear density of the string (mass of string per unit length) \cite{eqn3}\par
-Substitute (\ref{eqn2}) and (\ref{eqn3}) into (\ref{eqn1}) we get the expression for the frequency of an open string
-\begin{equation}\label{eqn4}
-    f_0 = \frac{1}{2l}\sqrt{\frac{T}{\mu}}
+
+In order to make the frequency match with a specific note in the Western twelve-tone equal temperament (12-TET) system, the scale length needs to be divided into powers of $\sqrt[12]{2}$. To do this luthiers traditionally use a formula to calculate the position of each fret. \cite{eqn6}
+
+\begin{equation}\label{eqn6}
+    l_n=\frac{l}{2^\frac{n}{12}}
 \end{equation}

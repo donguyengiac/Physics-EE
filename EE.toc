@@ -1,10 +1,10 @@
 \contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Personal observation}{3}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Background information \& Theory}{4}{subsection.1.2}%
-\contentsline {section}{\numberline {2}Experiment}{12}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Determining the constants}{13}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Apparatus}{16}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Process}{17}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Tables of results}{19}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Analysis of results}{21}{subsection.2.5}%
-\contentsline {section}{\numberline {3}Conclusion \& Evaluation}{26}{section.3}%
+\contentsline {section}{\numberline {2}Experiment}{11}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Determining the constants}{12}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Apparatus}{15}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Process}{16}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Tables of results}{18}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Analysis of results}{20}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Conclusion \& Evaluation}{25}{section.3}%
