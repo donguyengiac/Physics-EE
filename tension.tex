@@ -1,22 +1,54 @@
-A stretched guitar string is under tension $T$. When we press down on it, the whole string stretches accordingly by a small amount $\Delta l$. Assuming there is no friction on the point of contact, the tension in the whole string increases by an amount $\Delta T$, determined by:
+When the guitar string is under tension $T_a$, it causes the string to stretch an amount $\Delta l_0$ as compared to the unstretched length, which is the same as the effective vibrating strength of the string $l_s$. This relationship can be determined as:
 \begin{equation}
-    \Delta T = \frac{AY\Delta l}{l}\label{eqn21}
+    T_a = \frac{AY\Delta l_0}{l_s}\label{eqn18}
 \end{equation} 
-Where $A$ is the cross-sectional area of the string, and $Y$ is the Young's modulus of the material. \cite{polak} \par
-The total amount of stretch of the string $\Delta l$ can be calculated from Figure \ref{fig3}. 
-\begin{align}
-    \Delta l &= (l_b + l_n') - l \\
-    &= \sqrt{(l-l_n)^2+b^2} + \sqrt{l_n^2+a^2} - l \\
-    &= (l-l_n)\sqrt{1+\left(\frac{b}{l-l_n}\right)^2} + l_n\sqrt{1+\left(\frac{a}{l_n}\right)^2} - l\\
-    &= (l-l_n)\left(1+\left(\frac{b}{l-l_n}\right)^2\right)^{\frac{1}{2}} + l_n\left(1+\left(\frac{a}{l_n}\right)^2\right)^{\frac{1}{2}} - l
-\end{align}
-Once again, we can approximate this to the first order since both $a$ and $b$ are much smaller than $l_n$ and $l-l_n$. Therefore,
-\begin{align}
-    \Delta l &\approx (l-l_n)\left(1+\frac{b^2}{2(l-l_n)^2}\right)+ l_n\left(1+\frac{a^2}{2l_n^2}\right) - l \label{eqn26} \\
-    &= (l - l_n) + \frac{b^2}{2(l-l_n)} + l_n + \frac{a^2}{2l_n} - l \\
-    &= \frac{b^2}{2(l-l_n)} + \frac{a^2}{2l_n}
-\end{align}
-Substituting this into (\ref{eqn21}) we get
+Where $A$ is the cross-sectional area of the string, and $Y$ is the Young's modulus of the material. \cite{polak}
+
+When we press down on it, the whole string stretches accordingly by a small amount $\Delta l$. Assuming there is no friction on the point of contact, the tension in the whole string increases by an amount $\Delta T$:
 \begin{equation}
-    \Delta T = \frac{AY}{2l} \left( \frac{b^2}{l-l_n} + \frac{a^2}{l_n} \right) \label{eqn29}
+    T_a + \Delta T = \frac{AY(\Delta l_0 + \Delta l)}{l_s}\label{eqn19}
 \end{equation}
+Thus the relationship between $\Delta T$ and $\Delta l$ can be determined:
+\begin{equation}
+    \Delta T = \frac{AY\Delta l}{l_s}\label{eqn20}
+\end{equation} 
+It is very hard to observe and measure $\Delta l$ directly, so we can try rewriting it in terms of other variables that can be determined. From Figure \ref{fig2},  
+\begin{align}
+    \Delta l &= (l_b + l_n') - l_s \\
+    &= \sqrt{(l-l_n)^2+b^2} + \sqrt{l_n^2+a^2} - l_s \\
+    &= (l-l_n)\left(1+\left(\frac{b}{l-l_n}\right)^2\right)^{\frac{1}{2}} + l_n\left(1+\left(\frac{a}{l_n}\right)^2\right)^{\frac{1}{2}} - l_s
+\end{align}
+Once again, we can approximate this to the first order since $a << l_n$ and $b << l-l_n $:
+\begin{align}
+    \Delta l &\approx (l-l_n)\left(1+\frac{b^2}{2(l-l_n)^2}\right)+ l_n\left(1+\frac{a^2}{2l_n^2}\right) - l_s \label{eqn24} \\
+    &= (l - l_n) + \frac{b^2}{2(l-l_n)} + l_n + \frac{a^2}{2l_n} - l_s \label{eqn25} \\
+    &= \frac{b^2}{2(l-l_n)} + \frac{a^2}{2l_n} - (l_s - l) \label {eqn26}
+\end{align}
+From Figure \ref{fig2}, we can expand and approximate $l_s$ up to first order ($a-b << l$):
+
+\begin{align}
+    l_s &= \sqrt{l^2 + (a-b)^2}\\
+    &= l\bigg(1 + \bigg(\frac{a-b}{l}\bigg)^2\bigg)^\frac{1}{2} \label{eqn28}\\
+    &\approx l\bigg(1 + \frac{1}{2}\bigg(\frac{a-b}{l}\bigg)^2\bigg)\\
+    &= l + \frac{(a-b)^2}{2l}
+\end{align}
+Therefore from (\ref{eqn26}):
+\begin{align}
+    \Delta l &= \frac{b^2}{2(l-l_n)} + \frac{a^2}{2l_n} - \frac{(a-b)^2}{2l}
+\end{align}
+Substituting this into (\ref{eqn20}) we get
+\begin{equation}
+    \Delta T = \frac{AY}{2l_s} \left( \frac{b^2}{l-l_n} + \frac{a^2}{l_n} - \frac{(a-b)^2}{l} \right) \label{eqn32}
+\end{equation}
+Which can be substituted into (\ref{eqn17}):
+\begin{align}
+    \Delta f &= \frac{1}{4l_n} \sqrt{\frac{T}{\mu}} \bigg( \frac{AY}{2l_s T_a} \left( \frac{b^2}{l-l_n} + \frac{a^2}{l_n} - \frac{(a-b)^2}{l} \right) + \bigg(\frac{a-b}{l}\bigg)^2 - \bigg(\frac{a}{l_n} \bigg)^2 \bigg) \label{eqn33}
+\end{align}
+We need to write $l_s T_a$ in terms of $l$, $T$ and other variables. From (\ref{eqn11}) and (\ref{eqn28}), once again using a first order approximation since $a-b << l$:
+
+\begin{align}
+    T_a &= T\bigg(\frac{l_s}{l}\bigg)^2 \\
+    \implies l_s T_a &= T \frac{l_s^3}{l^2} \\
+    &= Tl \bigg(1 + \bigg(\frac{a-b}{l}\bigg)^2\bigg)^\frac{3}{2} \\
+    &\approx Tl \bigg(1 + \frac{3}{2}\bigg(\frac{a-b}{l}\bigg)^2\bigg) \label{eqn37}
+\end{align}

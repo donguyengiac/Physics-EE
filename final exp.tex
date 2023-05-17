@@ -1,25 +1,21 @@
-Finally, we can substitute (\ref{eqn29}) into (\ref{eqn20}) to get the expression between the intonation shift $\Delta f$ and the fret position $l_n$
+Finally, we can substitute (\ref{eqn37}) into (\ref{eqn33}) to get the expression between the intonation shift $\Delta f$ and the fret position $l_n$
 \begin{align}
-    \Delta f &= \frac{1}{4l_n} \sqrt{\frac{T}{\mu}} \left( \frac{AY}{2Tl} \left( \frac{b^2}{l-l_n} + \frac{a^2}{l_n} \right) - \frac{a^2}{{l_n}^2} \right) \label{eqn30}
+    \Delta f &= \frac{1}{4l_n} \sqrt{\frac{T}{\mu}} \bigg( \frac{AY}{2Tl \big(1 + \frac{3}{2}(\frac{a-b}{l})^2\big)} \left( \frac{b^2}{l-l_n} + \frac{a^2}{l_n} - \frac{(a-b)^2}{l} \right) + \Big(\frac{a-b}{l}\Big)^2 - \Big(\frac{a}{l_n}\Big)^2 \bigg) \label{eqn38}
 \end{align}
-From (\ref{eqn4}) we get
-\begin{equation*}
-    \sqrt{\frac{T}{\mu}} = 2lf_0
-\end{equation*}
-and 
-\begin{equation*}
-    T = 4\mu l^2{f_0}^2    
-\end{equation*}
-Subbing into (\ref{eqn30})
-\begin{equation}
-    \Delta f = \frac{l f_0}{2l_n} \left( \frac{AY}{8\mu l^3 {f_0}^2} \left( \frac{b^2}{l-l_n} + \frac{a^2}{l_n} \right) - \frac{a^2}{{l_n}^2} \right) \label{eqn31}
-\end{equation}
+From (\ref{eqn3}) we get
+\begin{align*}
+    \sqrt{\frac{T}{\mu}} &= 2lf_0 \\
+    \implies T &= 4\mu l^2{f_0}^2    
+\end{align*}
 $\mu$, the linear density of the string, is simply the mass per unit length of the string:
 \begin{equation*}
-    \mu = \frac{m}{l} = \frac{\rho V}{l} = \frac{\rho l A}{l} = \rho A
+    \mu = \frac{m}{l_s} = \frac{\rho V}{l_s} = \frac{\rho l_s A}{l_s} = \rho A
 \end{equation*}
-where $m$ is the mass of the vibrating string section, $V$ is its volume, and $\rho$ is the volumetric density of the material. Subbing this into (\ref{eqn31}):
+where $m$ is the mass of the vibrating string section, $V$ is its volume, and $\rho$ is the volumetric density of the material. Therefore:
+\begin{equation*}
+    T = 4\rho A l^2{f_0}^2    
+\end{equation*}
+Substituting all this into (\ref{eqn38}) we get the final expression between the intonation shift $\Delta f$ and the fret position $l_n$ relating all our known variables:
 \begin{align}
-    \Delta f &= \frac{l f_0}{2l_n} \left( \frac{AY}{8\rho A l^3 {f_0}^2} \left( \frac{b^2}{l-l_n} + \frac{a^2}{l_n} \right) - \frac{a^2}{{l_n}^2} \right) \label{eqn32} \\
-    &= \frac{l f_0}{2l_n} \left( \frac{Y}{8\rho l^3 {f_0}^2} \left( \frac{b^2}{l-l_n} + \frac{a^2}{l_n} \right) - \frac{a^2}{{l_n}^2} \right) \label{eqn33}
+    \Delta f &= \frac{l f_0}{2l_n} \left( \frac{Y}{8\rho l^3 {f_0}^2 (1 + \frac{3}{2}(\frac{a-b}{l})^2)} \left( \frac{b^2}{l-l_n} + \frac{a^2}{l_n} - \frac{(a-b)^2}{l} \right) + \frac{(a-b)^2}{l^2} - \frac{a^2}{{l_n}^2} \right) \label{eqn39}
 \end{align}

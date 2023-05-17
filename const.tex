@@ -1,37 +1,37 @@
-From the equation (\ref{eqn33}), the constants I need to determine are $f_0$, $\rho$, $Y$, $a$, $b$ and $l$. 
+From the equation (\ref{eqn39}), the constants I need to determine are $f_0$, $\rho$, $Y$, $a$, $b$ and $l$. 
 \begin{itemize}
-    \item $l$ is the scale length of the guitar. For a Fender Stratocaster, it is 25.5 inches (64.77cm). \cite{scale} I round this up to 64.8cm (3s.f). From this information, I can adjust the bridge saddle position so that the scale length matches 64.8cm (0.648 m)
+    \item $l$ is the scale length of the guitar. For a Fender Stratocaster, it is 25.5 inches (64.77 cm). \cite{scale} I round this up to 64.8 cm (3s.f). From this information, I can adjust the bridge saddle position so that the scale length matches 64.8 cm (0.648 m)
     \item Initial frequency $f_0$ can be measured directly in the experiment. The frequency we aim for is the frequency of G string on the guitar for a standard A440 tuning system, $G_3$ at 196 Hz \cite{freq_chart}
     \item Young's modulus $Y$ is dependent on the specifications of the string material. Nearly all electric guitar strings follow the ASTM-A228 manufacturing standards for steel music wire, and the value of $Y$ is \SI{210}{\giga\pascal} (\SI{2.10e11}{\pascal}). \cite{astm} 
-    \item $\rho$, the density of the string material, is determined according to the ASTM-A228 standards. $\rho = \SI{7.80e3}{\kg.m^{-3}}$. \cite{astm}
-    \item $a$ and $b$: it is very hard to measure these directly, as they are distance from the nut and saddle to the top of the fret, not the height itself. Therefore I can only set up the guitar indirectly according to recommended values and calculate them afterwards. There are a lot of resources online on how to set up the guitar. I choose to follow the instructions by Stewmac \cite{stewmac}, a reputable online guitar retailer, and take the average value of the action (distance between string and top of fret) for the \nth{1} fret to be 0.016" (0.406mm) and \nth{12} fret to be 0.070" (1.78mm). I change the adjustable saddle height and file down/shim up the nut height to match these values. From there I can calculate the values of $a$ and $b$ as illustrated by Figure \ref{fig4}: \par
-    \begin{figure}[ht]
-        \includegraphics[width = \textwidth]{./ee/fig4.png}
-        \caption{Diagram to calculate values of $a$ and $b$ (Exaggerated)} \label{fig4}
-    \end{figure}
-    \FloatBarrier
-    Since fret \nth{12} is exactly in the middle of l ($l_{12} = \frac{l}{2} = \frac{.648}{2} = .324$ m) we get a pair of congruent triangles as highlighted. Therefore:
-    \begin{align*}
-        a &= h_{12} + x \\
-        b &= h_{12} - x
-    \end{align*}
-    From the luthier formula (\ref{eqn6}) we get
-    \begin{align*}
-        l_1 &= \frac{l}{2^{\frac{1}{12}}} \\
-            &= \frac{.648}{2^{\frac{1}{12}}} \\
-            &= \SI{.612}{\meter}
-    \end{align*}
-    and we also get the ratio in Figure \ref{fig4}
-    \begin{align*}
-        \frac{x}{y} &= \frac{l-l_{12}}{l_1-l_{12}} \\
-        x &= y\frac{l-l_{12}}{l_1-l_{12}} \\
-        &= (h_{12}-h_1)\frac{l-l_{12}}{l_1-l_{12}} \\
-        &= (1.78-.406) \cdot 10^{-3} \cdot \frac{.648-.324}{.612-.324} \\
-        &= \SI{1.55e-3}{\meter}
-    \end{align*}
-    Therefore
-    \begin{align*}
-        a &= 1.78 + 1.55 = \SI{3.33e-3}{\meter} \\
-        b &= 1.78 - 1.55 = \SI{1.30e-4}{\meter}
-    \end{align*}    
+    \item $\rho$, the density of the string material, is determined according to the ASTM-A228 standards: $\rho = \SI{7.80e3}{\kg.m^{-3}}$. \cite{astm}
+    \item $a$ and $b$: it is very hard to measure these directly, as they are distance from the nut and saddle to the top of the fret, not the height itself. Therefore, I can only set up the guitar indirectly according to recommended values and calculate them afterwards. There are a lot of resources online on how to set up the guitar. I choose to follow the instructions by Stewmac \cite{stewmac}, a reputable online guitar retailer, and take the average value of the action (distance between string and top of fret) for the \nth{1} fret to be 0.016" (0.406 mm) and \nth{12} fret to be 0.070" (1.78 mm). I change the adjustable saddle height and file down/shim up the nut height to match these values. From there I can calculate the values of $a$ and $b$ as illustrated by Figure \ref{fig3}: \par
 \end{itemize}
+\begin{figure}[!htbp]
+    \includegraphics[width = \textwidth]{./ee/fig4.png}
+    \caption{Diagram to calculate values of $a$ and $b$} \label{fig3}
+\end{figure}
+Since fret \nth{12} is exactly in the middle of $l$ ($l_{12} = \frac{l}{2} = \frac{.648}{2} = .324$ m) we get:
+\begin{align*}
+    a &= h_{12} + x \\
+    b &= h_{12} - x
+\end{align*}
+From the luthier formula (\ref{eqn2}):
+\begin{align*}
+    l_1 &= \frac{l}{2^{\frac{1}{12}}} \\
+        &= \frac{0.648}{2^{\frac{1}{12}}} \\
+        &= \SI{0.612}{\meter}
+\end{align*}
+and we also get the ratio in Figure \ref{fig3}
+\begin{align*}
+    \frac{x}{y} &= \frac{l-l_{12}}{l_1-l_{12}} \\
+    x &= y\frac{l-l_{12}}{l_1-l_{12}} \\
+    &= (h_{12}-h_1)\frac{l-l_{12}}{l_1-l_{12}} \\
+    &= (1.78-0.406) \cdot 10^{-3} \cdot \frac{0.648-0.324}{0.612-0.324} \\
+    &= \SI{1.55e-3}{\meter}
+\end{align*}
+Therefore
+\begin{align*}
+    a &= 1.78 + 1.55 = \SI{3.33e-3}{\meter} \\
+    b &= 1.78 - 1.55 = \SI{1.30e-4}{\meter}
+\end{align*}    
+

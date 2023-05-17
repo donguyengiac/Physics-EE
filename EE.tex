@@ -5,11 +5,12 @@
 \usepackage[super]{nth}
 \usepackage{caption}
 \usepackage{parskip}
-\usepackage{placeins}
+\usepackage[section]{placeins}
 \usepackage[hidelinks]{hyperref}
 \usepackage{setspace}
+\usepackage[title, titletoc]{appendix}
 
-%\usepackage[nottoc,numbib]{tocbibind}
+\usepackage[nottoc,numbib]{tocbibind}
 
 %\usepackage{hyperref}
 
@@ -31,12 +32,10 @@
             \subsection{Background information \& Theory}
                 \subsubsection*{Basic model of guitar strings and frets}
                     \input{basic model.tex}
-                \subsubsection*{How the guitar string produces different notes}
+                \subsubsection*{How the guitar string and frets work}
                     \input{produce sound.tex}
-                %\subsubsection*{How frets work}
-                %    \input{frets work.tex}
                 \subsubsection*{Cause of intonation issues}
-                    \input{intonation cause.tex}
+                    \input{alternative.tex}
                 \subsubsection*{Tension of the guitar string}
                     \input{tension.tex}
                 \subsubsection*{Final expression relating frequency change and position of fret}
@@ -57,8 +56,8 @@
                     \input{tbl raw.tex}
                 \subsubsection*{Table of processed data}
                     \input{tbl processed.tex}
-                \subsubsection*{Sample calculations}
-                    \input{sample calc.tex}
+                %\subsubsection*{Sample calculations}
+                %    \input{sample calc.tex}
             \subsection{Analysis of results}
                 \subsubsection*{Graphs}    
                     \input{graph.tex}
@@ -67,6 +66,7 @@
         \section{Conclusion \& Evaluation}
             \input{conc eval.tex}
         \input{bib.tex}
+        \input{append.tex}
     \end{flushleft}
 
 \end{document}

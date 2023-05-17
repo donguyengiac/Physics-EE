@@ -1,5 +1,5 @@
 When pressed down, due to the distance between the nut and the saddle to top of the frets ($b$ and $a$ respectively in Figure \ref{fig3}), the vibrating string length also stretches. The effective vibrating length is now $l_n'$. The fretting force $F$ also causes an increase in tension of the whole string, so the tension now is $T+ \Delta T$. \par
-Therefore, taking into account the fretting action, the frequency now will no longer be the same as the intended frequency $f_n$. This explains why we observe the intonation problem when fretting down on the string. We will call this new frequency $f_n'$
+Because of this change, the actual frequency when the string is fretted  isn't the same as the frequency determined from the formula$f_n$. This explains why we observe the intonation problem when fretting down on the string. We will call this new frequency $f_n'$
 \begin{equation}\label{eqn7}
     f'_n= \frac{1}{2l_n'}\sqrt{\frac{T+\Delta T}{\mu}}
 \end{equation}
@@ -13,21 +13,20 @@ The intonation deviation is then simply
 From Figure \ref{fig3}, using Pythagoras' Theorem for $l_n'$ we get
 \begin{align}
     l_n' &= \sqrt{l_n^2+a^2} \\
-    &= \sqrt{l_n^2\left(1+\left(\frac{a}{l_n}\right) ^2\right)} \\
-    &= l_n \sqrt{1+\left(\frac{a}{l_n}\right) ^2} \\
-    &= l_n \left(1+\left(\frac{a}{l_n}\right) ^2\right)^{\frac{1}{2}} 
+    &= l_n\sqrt{1+\left(\frac{a}{l_n}\right) ^2} 
 \end{align}
-Subbing this into (\ref{eqn9}):
+Subbing this into (\ref{eqn9}) and simplify:
 \begin{align}
     \Delta f &= \frac{1}{2\sqrt{\mu}} \left( \frac{\sqrt{T+\Delta T}}{l_n\sqrt{1+\left(\frac{a}{l_n}\right) ^2}} - \frac{\sqrt{T}}{l_n} \right) \\
-    &= \frac{1}{2l_n\sqrt{\mu}} \left( (T+\Delta T)^{\frac{1}{2}} \left( 1+\left(\frac{a}{l_n}\right) ^2\right)^{-\frac{1}{2}} - \sqrt{T} \right) \\
-    &= \frac{1}{2l_n\sqrt{\mu}} \left( T^{\frac{1}{2}}\left(1+\frac{\Delta T}{T}\right)^{\frac{1}{2}} \left( 1+\left(\frac{a}{l_n}\right) ^2\right)^{-\frac{1}{2}} - \sqrt{T} \right) \\
     &= \frac{1}{2l_n} \sqrt{\frac{T}{\mu}}\left(\left(1+\frac{\Delta T}{T}\right)^{\frac{1}{2}} \left( 1+\left(\frac{a}{l_n}\right) ^2\right)^{-\frac{1}{2}} - 1 \right)
 \end{align}
 
-Since $\Delta T$ is much smaller than T, and similarly $a$ is much smaller than $l_n$, we can approximate this to the first order
+Since $\Delta T$ is much smaller than T, and similarly $a$ is much smaller than $l_n$, we can approximate this to the first order, using the binomial approximation \cite{spakula}: 
 \begin{align}
     \Delta f &\approx \frac{1}{2l_n} \sqrt{\frac{T}{\mu}} \left( \left(1+\frac{\Delta T}{2T}\right) \left( 1- \frac{a^2}{2{l_n}^2} \right) - 1\right)\label{eqn18} \\ 
-    &= \frac{1}{2l_n} \sqrt{\frac{T}{\mu}} \left( -\frac{a^2}{2{l_n}^2} + \frac{\Delta T}{2T} - \frac{a^2\Delta T}{4T{l_n}^2}\right) \\
-    &\approx \frac{1}{4l_n} \sqrt{\frac{T}{\mu}} \left( \frac{\Delta T}{T} - \frac{a^2}{{l_n}^2} \right) \label{eqn20}
+    &= \frac{1}{2l_n} \sqrt{\frac{T}{\mu}} \left(\frac{\Delta T}{2T} - \frac{a^2}{2{l_n}^2} - \frac{a^2\Delta T}{4T{l_n}^2}\right)
+\end{align}
+The final term is second-order overall (containing both $\Delta T$ and $a$) and can be ignored.
+\begin{align}
+    \Delta f &\approx \frac{1}{4l_n} \sqrt{\frac{T}{\mu}} \left( \frac{\Delta T}{T} - \frac{a^2}{{l_n}^2} \right) \label{eqn20}
 \end{align}
