@@ -1,13 +1,12 @@
 \contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Personal observation}{3}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Background information \& Theory}{4}{subsection.1.2}%
-\contentsline {section}{\numberline {2}Experiment}{14}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Determining the constants}{15}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Apparatus}{18}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Process}{19}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Tables of results}{21}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Analysis of results}{22}{subsection.2.5}%
-\contentsline {section}{\numberline {3}Conclusion \& Evaluation}{27}{section.3}%
-\contentsline {section}{References}{33}{figure.caption.26}%
-\contentsline {section}{\numberline {4}References}{33}{section.4}%
-\contentsline {section}{Appendix \numberline {A}Raw and Processed Data for B and E Strings}{35}{appendix.1.A}%
+\contentsline {section}{\numberline {2}Experiment}{13}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Determining the constants}{14}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Apparatus}{17}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Process}{18}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Tables of results}{20}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Analysis of results}{21}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Conclusion \& Evaluation}{26}{section.3}%
+\contentsline {section}{References}{32}{figure.caption.26}%
+\contentsline {section}{Appendix \numberline {A}Raw and Processed Data for B and E Strings}{34}{appendix.1.A}%
