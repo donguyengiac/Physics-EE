@@ -8,5 +8,5 @@
 \contentsline {subsection}{\numberline {2.4}Tables of results}{20}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Analysis of results}{21}{subsection.2.5}%
 \contentsline {section}{\numberline {3}Conclusion \& Evaluation}{26}{section.3}%
-\contentsline {section}{References}{32}{figure.caption.26}%
+\contentsline {section}{References}{31}{figure.caption.26}%
 \contentsline {section}{Appendix \numberline {A}Raw and Processed Data for B and E Strings}{34}{appendix.1.A}%

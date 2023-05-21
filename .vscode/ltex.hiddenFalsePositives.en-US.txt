@@ -1,0 +1,1 @@
+{"rule":"NUT_NOT","sentence":"^\\QI adjust the bridge height and file down or shim up the nut accordingly to match these values.\\E$"}

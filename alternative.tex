@@ -1,29 +1,27 @@
-%When the string is plucked, it will create travelling waves on the string that reflect at both ends, creating standing waves. The frequency of the standing waves with the longest wavelength is the fundamental frequency, also called the first harmonic. This is the lowest frequency, and there will usually be other higher harmonics that when combined create the characteristic timbre of the electric guitar.
 Intonation deviation happens when there is a difference between the frequency that we expect when we fret down on a note and the actual frequency that we get.
 
-Intonation deviations happen because luthiers calculated the positioning of the frets with a basic, simplified model, assuming the length of the string is equal to the length of the fretboard, the string doesn't stretch, and ignoring the effects of the nut and bridge; whereas in reality, the length of the string is slightly longer than the fretboard (due to the nut and bridge's height difference), and when the string is pressed down the length will stretch a little as well as the tension will slightly increase. 
+This is because luthiers calculated the positioning of the frets with a basic, simplified model, assuming the string length is equal to the scale length ($l_s = l$), the string doesn't stretch, and ignoring the effects of the nut and bridge; whereas in reality, the string length is slightly longer than the scale length (due to the nut and bridge's height difference), and when the string is pressed the length will stretch a little, slightly increasing the tension. 
 
 From Figure \ref{fig2}, using Mersenne's Law, the fundamental frequency of the string $f_0$ according to the luthier's model is:
 \begin{equation} \label{eqn3}
     f_0 = \frac{1}{2l}\sqrt{\frac{T}{\mu}}
 \end{equation} 
-Where $l$ is the “scale length” of the guitar (the distance between the bridge and the nut). \cite{mersenne} 
 
 And the expected frequency $f_n$ at the $n^{th}$ fret is: 
 \begin{equation} \label{eqn4}
     f_n = \frac{1}{2l_n}\sqrt{\frac{T}{\mu}}
 \end{equation}
-$l_n$ is the length between the $n^{th}$ fret and the bridge. However, in real life the string doesn't follow this perfect simplified model, so if we take into account the assumptions luthiers make, the initial frequency $f_0$ is governed by:
+However, in real life the string doesn't follow this perfect simplified model, so physically the initial frequency $f_0$ is governed by:
 \begin{equation} \label{eqn5}
     f_0 = \frac{1}{2l_s}\sqrt{\frac{T_a}{\mu}}
 \end{equation}
-Where $l_s$ is the actual length of the whole vibrating string, and $T_a$ is the actual tension on the string. Notice this $f_0$ is the same as in the luthier's model because this is the fundamental tuning frequency of the string. However, once the string is fretted the intonation will deviate. The observed frequency $f'_n$ at the $n^{th}$ fret is: 
+Where $l_s$ is the actual length of the whole vibrating string, and $T_a$ is the actual tension on the string. Notice this $f_0$ is the same as in the luthier's model because this is the frequency the string is tuned to. However, once the string is fretted the intonation will deviate. The observed frequency $f'_n$ at the $n^{th}$ fret is: 
 \begin{equation} \label{eqn6}
     f'_n = \frac{1}{2l'_n}\sqrt{\frac{T_a + \Delta T}{\mu}}
 \end{equation}
 Here $l'_n$ is the length of the vibrating segment, and there is a $\Delta T$ term added to the tension because the fretting force causes the total tension to increase slightly. 
 
-This difference between $f_n$ and $f'_n$ is what causing the intonation deviation. We call this $\Delta f$:
+This difference between $f_n$ and $f'_n$ is the intonation deviation, $\Delta f$:
 \begin{align}
     \Delta f &= f'_n - f_n \\
     &= \frac{1}{2\sqrt{\mu}} \bigg(\frac{\sqrt{T_a + \Delta T}}{l'_n} - \frac{\sqrt{T}}{l_n} \bigg)
@@ -34,25 +32,23 @@ From Figure \ref{fig2} it is easy to see $l'_n = \sqrt{a^2 + l_n^2}$:
     &= \frac{1}{2\sqrt{\mu}} \bigg(\frac{\sqrt{T_a}  \sqrt{1 + \frac{\Delta T}{T_a} }}{l_n \sqrt{1 + (\frac{a}{l_n})^2}} - \frac{\sqrt{T}}{l_n} \bigg)
 \end{align}
 Also from (\ref{eqn3}) and (\ref{eqn5}):
-\begin{equation} \label{eqn11}
-    \sqrt{T_a} = \sqrt{T} \bigg(\frac{l_s}{l}\bigg)
-\end{equation}
-Therefore:
-\begin{align}
-    \Delta f &= \frac{1}{2\sqrt{\mu}} \Bigg(\frac{ \sqrt{T} (\frac{l_s}{l}) \sqrt{1 + \frac{\Delta T}{T_a} }}{l_n \sqrt{1 + (\frac{a}{l_n})^2}} - \frac{\sqrt{T}}{l_n} \Bigg) \\
-    &= \frac{1}{2l_n} \sqrt{\frac{T}{\mu}} \Bigg(\bigg(\frac{l_s}{l}\bigg) \bigg(1 + \frac{\Delta T}{T_a}\bigg)^\frac{1}{2} \bigg(1 + \bigg(\frac{a}{l_n}\bigg)^2 \bigg)^{-\frac{1}{2}} - 1 \Bigg)
-\end{align}
+\begin{gather}
+    \sqrt{T_a} = \sqrt{T} \bigg(\frac{l_s}{l}\bigg) \label{eqn11} \\ 
+    \begin{align}
+        \implies \Delta f &= \frac{1}{2\sqrt{\mu}} \Bigg(\frac{ \sqrt{T} (\frac{l_s}{l}) \sqrt{1 + \frac{\Delta T}{T_a} }}{l_n \sqrt{1 + (\frac{a}{l_n})^2}} - \frac{\sqrt{T}}{l_n} \Bigg) \\
+        &= \frac{1}{2l_n} \sqrt{\frac{T}{\mu}} \Bigg(\bigg(\frac{l_s}{l}\bigg) \bigg(1 + \frac{\Delta T}{T_a}\bigg)^\frac{1}{2} \bigg(1 + \bigg(\frac{a}{l_n}\bigg)^2 \bigg)^{-\frac{1}{2}} - 1 \Bigg)
+    \end{align}
+\end{gather}
 From Figure \ref{fig2}: $l_s = \sqrt{(a-b)^2 + l^2}$, so:
-\begin{align*}
-    \frac{l_s}{l} = \sqrt{1 + \bigg(\frac{a-b}{l}\bigg)^2}
-\end{align*}
-And we get:
-\begin{align}
-    \Delta f &= \frac{1}{2l_n} \sqrt{\frac{T}{\mu}} \Bigg(\bigg( 1 + \bigg(\frac{a-b}{l}\bigg)^2\bigg)^\frac{1}{2} \bigg(1 + \frac{\Delta T}{T_a}\bigg)^\frac{1}{2} \bigg(1 + \bigg(\frac{a}{l_n}\bigg)^2\bigg)^{-\frac{1}{2}} - 1 \Bigg)
-\end{align}
+\begin{gather*}
+    \frac{l_s}{l} = \sqrt{1 + \bigg(\frac{a-b}{l}\bigg)^2}\\
+    \begin{align}
+        \implies \Delta f &= \frac{1}{2l_n} \sqrt{\frac{T}{\mu}} \Bigg(\bigg( 1 + \bigg(\frac{a-b}{l}\bigg)^2\bigg)^\frac{1}{2} \bigg(1 + \frac{\Delta T}{T_a}\bigg)^\frac{1}{2} \bigg(1 + \bigg(\frac{a}{l_n}\bigg)^2\bigg)^{-\frac{1}{2}} - 1 \Bigg)
+    \end{align}
+\end{gather*}
 Since $a-b << l$, $\Delta T << T_a$, $a << l_n$, we can approximate the expression to first order using the binomial approximation \cite{spakula}, expand and simplify, only keeping terms up to first order overall.
 \begin{align}
     \Delta f &\approx \frac{1}{2l_n} \sqrt{\frac{T}{\mu}} \Bigg(\bigg( 1 + \frac{1}{2}\bigg(\frac{a-b}{l}\bigg)^2 \bigg) \bigg(1 + \frac{\Delta T}{2T_a}\bigg) \bigg(1 - \frac{1}{2} \bigg(\frac{a}{l_n}\bigg)^2\bigg) - 1 \Bigg) \\
-    &= \frac{1}{2l_n} \sqrt{\frac{T}{\mu}} \Bigg(1 + \frac{1}{2}\bigg(\frac{a-b}{l}\bigg)^2 + \frac{\Delta T}{2T_a} - \frac{1}{2} \bigg(\frac{a}{l_n}\bigg)^2 - 1 \Bigg) \\
+    &\approx \frac{1}{2l_n} \sqrt{\frac{T}{\mu}} \Bigg(1 + \frac{1}{2}\bigg(\frac{a-b}{l}\bigg)^2 + \frac{\Delta T}{2T_a} - \frac{1}{2} \bigg(\frac{a}{l_n}\bigg)^2 - 1 \Bigg) \\
     &= \frac{1}{4l_n} \sqrt{\frac{T}{\mu}} \Bigg( \bigg(\frac{a-b}{l}\bigg)^2 + \frac{\Delta T}{T_a} - \bigg(\frac{a}{l_n}\bigg)^2 \Bigg) \label{eqn17}
 \end{align}
